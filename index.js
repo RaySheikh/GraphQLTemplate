@@ -22,9 +22,9 @@ ObjectId.prototype.valueOf = function () {
 const server = new ApolloServer({
     typeDefs, 
     resolvers, 
-    context: ({ req }) => {
+    context: ({ req }) => ({
       Pet
-    },
+    })
 });
 server.applyMiddleware({app})
 
